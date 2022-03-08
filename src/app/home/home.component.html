@@ -1,0 +1,26 @@
+<h1>HOME PAGE</h1>
+<button type="button" class="bg-dark" style="color:white" (click)="logout()">Logout</button>
+<div>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">EMAIL</th>
+        <th scope="col">BLOCK</th>
+        <th scope="col">DELETE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users;let i=index;">
+        <th scope="row">{{user.id}}</th>
+        <td>{{user.email}}</td>
+        <td><button type="button" class="bg-dark" style="color:white" (click)="blockUser(user)"> BLOCK</button></td>
+        <td><button type="button" class="bg-dark" style="color:white" (click)="delUser(user.id)"> DELETE</button></td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+
+  
+  
